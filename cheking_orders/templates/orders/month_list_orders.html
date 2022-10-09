@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}
+Просмотр данных по периодам
+{% endblock %}
+{% block content %}
+    {% for order in orders %}
+    {% include 'includes/order.html' %}
+    {%endfor%}
+ 
+{% endblock %}  

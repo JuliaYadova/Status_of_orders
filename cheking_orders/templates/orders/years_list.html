@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+Просмотр данных по периодам
+{% endblock %}
+{% block content %}
+<div class="row row-cols-1 row-cols-md-3" style="top: 200px;">
+    {% for year in years %}
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{year}}</h5>
+          <p class="card-text">Далее доступна подробная информация по месяцам.</p>
+          <a href="{% url 'orders:months_list' year %}" class="btn btn-primary">Открыть</a>
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+ 
+{% endblock %}  

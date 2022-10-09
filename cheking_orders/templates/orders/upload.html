@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+    Выберите тип данных для загрузки
+{% endblock %}
+{% block content %}
+<div class="row row-cols-1 row-cols-md-3" style="top: 200px;">
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Загрузка данных Вендор</h5>
+          
+          <a href="{% url 'orders:upload_vendor' %}" class="btn btn-primary">Перейти</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Загрузка данных Маркет</h5>
+          
+          <a href="{% url 'orders:upload_market' %}" class="btn btn-primary">Перейти</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Загрузка данных Возвраты</h5>
+            
+            <a href="{% url 'orders:upload_return' %}" class="btn btn-primary">Перейти</a>
+          </div>
+        </div>
+    </div>
+    <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Загрузка данных Претензии</h5>
+            
+            <a href="{% url 'orders:upload_claim' %}" class="btn btn-primary">Перейти</a>
+          </div>
+        </div>
+    </div>
+</div> 
+{% endblock %}  

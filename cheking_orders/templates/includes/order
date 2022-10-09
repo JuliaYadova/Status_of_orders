@@ -1,0 +1,6 @@
+<article>
+    <table>
+        <tr><th>Servertxid</th><th>Order</th><th>Status</th><th>Price status</th></tr>
+        <tr><td>{{order.servertxid}}</td><td>{{order.order}}</td><td>{{order.order_status()}}</td><td>{{order.order_summ()}}</td></tr>
+    </table>
+  </article>

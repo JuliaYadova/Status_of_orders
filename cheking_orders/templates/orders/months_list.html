@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+Просмотр данных по периодам
+{% endblock %}
+{% block content %}
+<div class="row row-cols-1 row-cols-md-3" style="top: 200px;">
+    {% for month in months %}
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{month}}</h5>
+          <p class="card-text">Статус месяца:{{status}} .</p>
+          <a href="{% url 'orders:month_list_orders' year month %}" class="btn btn-primary">Открыть</a>
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+ 
+{% endblock %}  
